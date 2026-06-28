@@ -1,0 +1,95 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 16px;
+}
+
+.brand-icon-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-text h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1;
+  color: var(--color-text-primary);
+  text-shadow: var(--glow-subtle);
+}
+
+.brand-text span {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--color-neon-green);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-self: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-neon-green);
+  text-shadow: var(--glow-subtle);
+  border-bottom-color: var(--color-neon-green);
+}
+
+.contact-btn {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-neon-green);
+  color: var(--color-neon-green);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: var(--color-neon-green-dim);
+  box-shadow: var(--glow-subtle);
+}
+
+@media (max-width: 1024px) {
+  .navbar-links {
+    display: none; /* In a real app, we'd add a hamburger menu here */
+  }
+}
